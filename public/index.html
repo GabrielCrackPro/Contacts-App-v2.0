@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contacts App</title>
+  </head>
+  <body>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Contacts App</a></li>
+        <li id="about-link"><a href="#">About</a></li>
+      </ul>
+    </nav>
+    <div class="add-contact">
+      <form id="add-contact">
+        <input
+          type="text"
+          name="name"
+          id="contact-name"
+          placeholder="Name"
+          autocomplete="off"
+          spellcheck="off"
+        />
+        <br />
+        <input
+          type="tel"
+          name="phone"
+          id="contact-form"
+          placeholder="Phone Number"
+          autocomplete="off"
+          spellcheck="off"
+        />
+        <br />
+        <textarea
+          name="description"
+          id="contact-description"
+          cols="30"
+          rows="10"
+          placeholder="Description"
+          autocomplete="off"
+          spellcheck="off"
+        ></textarea>
+        <br />
+        <button type="submit">Save</button>
+      </form>
+      <div class="contacts-list"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "contacts-app",
+  "version": "2.0.0",
+  "description": "This is the second version of my previous contacts app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielCrackPro/Contacts-App-v2.0.git"
+  },
+  "author": "Gabriel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielCrackPro/Contacts-App-v2.0/issues"
+  },
+  "homepage": "https://github.com/GabrielCrackPro/Contacts-App-v2.0#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7"
+  }
+}
