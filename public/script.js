@@ -1,5 +1,6 @@
 const form = document.querySelector('form')
 const contactsList = document.querySelector('.contacts-list')
+let storedContactsArray = []
 
 form.addEventListener('submit', (event) => {
     const formData = new FormData(form)
@@ -22,6 +23,27 @@ form.addEventListener('submit', (event) => {
     <button class="favorite"><i class="fas fa-star"></i></button>
     <button class="delete"><i class="fas fa-trash-alt"></i></button>
     `
+    //Store contacts in localstorage
+    const stortedContact = localStorage.setItem('Contact', JSON.stringify(newContact))
+    storedContactsArray.push(stortedContact)
+
+    const deleteButton = document.querySelector('.delete')
+    const favoriteButton = document.querySelector('.favorite')
+    //Button listeners
+    favoriteButton.addEventListener('click', () => {
+        favoriteButton.parentElement.classList.toggle('favorite')
+    })
+    deleteButton.addEventListener('click', () => {
+        deleteButton.parentElement.remove()
+    })
     form.reset()
     event.preventDefault()
 })
+function GetContacts() {
+    const savedContats = localStorage.getItem('Contact')
+    contactsList.append(savedContats)
+    if (savedContats == null) {
+        contactsList.remove()
+    }
+}
+document.addEventListener('load', GetContacts())
